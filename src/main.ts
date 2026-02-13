@@ -55,7 +55,8 @@ const pickingRig = createFacePickingRig();
 scene.add(pickingRig.group);
 
 const loader = new TextureLoader();
-const earthTexture = await loader.loadAsync('/textures/earth_day.jpg');
+const earthTextureUrl = `${import.meta.env.BASE_URL}textures/earth_day.jpg`;
+const earthTexture = await loader.loadAsync(earthTextureUrl);
 earthTexture.colorSpace = renderer.outputColorSpace;
 
 const earthRig = createEarthChunkRig(earthTexture);

@@ -56,3 +56,5 @@ TODO / next iteration:
 - Updated HUD copy to document touch controls while retaining desktop mouse guidance.
 - Added `scripts/mobile-touch-test.mjs` automated touch regression script (iPhone emulation) verifying one-finger puzzle move and two-finger orbit camera movement.
 - Revalidated with `npm run build`, `npm test`, required skill Playwright run (`output/web-game-mobile-pass/`), mobile touch script (`output/mobile-touch-test/`), and existing button flow script.
+- Fixed GitHub Pages black-screen issue by loading Earth texture with `import.meta.env.BASE_URL` (`/EarthShuffle/...` in Pages) instead of absolute `/textures/...`.
+- Confirmed production build output now references `/EarthShuffle/textures/earth_day.jpg` in bundled JS.
