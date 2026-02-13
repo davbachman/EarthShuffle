@@ -47,3 +47,7 @@ TODO / next iteration:
 - Implemented `GameStateEngine.applyDiscreteMove(...)` and `GameStateEngine.shuffle(moveCount, rng)`; shuffle applies 20 random face-tangent ±1 moves by default.
 - Added deterministic unit test coverage for shuffle invocation and state mutation.
 - Revalidated with `npm run build`, `npm test` (8 tests), required skill Playwright run (`output/web-game-buttons/`), and direct button flow script (`scripts/button-flow-test.mjs`) confirming: shuffle changes state, reset restores initial state, and keyboard keys no longer affect state.
+- Added GitHub Pages deployment workflow (`.github/workflows/deploy-pages.yml`) to build and deploy on pushes to `main`.
+- Updated Vite config to use `/EarthShuffle/` base path on GitHub Actions builds so asset URLs resolve on GitHub Pages.
+- Removed stale `/vite.svg` favicon reference from `index.html` to avoid Pages 404.
+- Verified with local tests and CI-mode build (`GITHUB_ACTIONS=true npm run build`) that generated asset paths are `/EarthShuffle/...`.
