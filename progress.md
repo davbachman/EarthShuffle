@@ -58,3 +58,8 @@ TODO / next iteration:
 - Revalidated with `npm run build`, `npm test`, required skill Playwright run (`output/web-game-mobile-pass/`), mobile touch script (`output/mobile-touch-test/`), and existing button flow script.
 - Fixed GitHub Pages black-screen issue by loading Earth texture with `import.meta.env.BASE_URL` (`/EarthShuffle/...` in Pages) instead of absolute `/textures/...`.
 - Confirmed production build output now references `/EarthShuffle/textures/earth_day.jpg` in bundled JS.
+- Added mobile portrait responsive sizing by increasing orbit distance to `2.45` for coarse-pointer portrait devices so puzzle fits phone screens better.
+- Added `README.md` with app link, app description, and concise control summary only.
+- Added standard MIT `LICENSE`.
+- Added comprehensive `AGENTS.md` documenting architecture, controls, scripts, deployment, and agent expectations.
+- Revalidated with `npm run build`, `npm test`, required skill Playwright run (`output/web-game-portrait-size/`), and mobile touch regression script (`output/mobile-touch-test/`) confirming portrait camera distance reflects mobile preset.

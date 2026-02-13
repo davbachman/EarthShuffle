@@ -43,7 +43,16 @@ const sceneBundle = createSceneBundle(viewport);
 const { scene, camera, renderer } = sceneBundle;
 
 const orbit = new OrbitController();
-orbit.apply(camera);
+
+function applyResponsiveViewPreset(): void {
+  const isPortrait = window.matchMedia('(orientation: portrait)').matches;
+  const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+
+  orbit.distance = isPortrait && isCoarsePointer ? 2.45 : 2.2;
+  orbit.apply(camera);
+}
+
+applyResponsiveViewPreset();
 
 const starfield = createStarfield();
 scene.add(starfield);
@@ -120,6 +129,7 @@ shuffleButton.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
   sceneBundle.resize();
+  applyResponsiveViewPreset();
 });
 
 window.addEventListener('beforeunload', () => {
