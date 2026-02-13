@@ -51,3 +51,8 @@ TODO / next iteration:
 - Updated Vite config to use `/EarthShuffle/` base path on GitHub Actions builds so asset URLs resolve on GitHub Pages.
 - Removed stale `/vite.svg` favicon reference from `index.html` to avoid Pages 404.
 - Verified with local tests and CI-mode build (`GITHUB_ACTIONS=true npm run build`) that generated asset paths are `/EarthShuffle/...`.
+- Added mobile gesture support in input controller: one-finger drag performs face slides, two-finger drag orbits camera via touch midpoint.
+- Added robust pointer capture guards to handle synthetic/platform pointer edge cases safely.
+- Updated HUD copy to document touch controls while retaining desktop mouse guidance.
+- Added `scripts/mobile-touch-test.mjs` automated touch regression script (iPhone emulation) verifying one-finger puzzle move and two-finger orbit camera movement.
+- Revalidated with `npm run build`, `npm test`, required skill Playwright run (`output/web-game-mobile-pass/`), mobile touch script (`output/mobile-touch-test/`), and existing button flow script.

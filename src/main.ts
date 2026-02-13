@@ -19,8 +19,8 @@ app.innerHTML = `
   <div id="viewport"></div>
   <div id="hud">
     <h1>EarthShuffle</h1>
-    <p>LMB: drag a face layer</p>
-    <p>RMB: orbit camera</p>
+    <p>Drag face: one finger / LMB</p>
+    <p>Orbit view: two fingers / RMB</p>
     <div class="hud-buttons">
       <button id="reset-btn" type="button">Reset</button>
       <button id="shuffle-btn" type="button">Shuffle</button>
